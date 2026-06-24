@@ -1,0 +1,61 @@
+{
+  "name": "@pi-unipi/notify",
+  "version": "2.0.15",
+  "description": "Cross-platform notification extension for Pi — native OS, Gotify, and Telegram notifications for agent lifecycle events",
+  "type": "module",
+  "main": "index.ts",
+  "license": "MIT",
+  "author": "Neuron Mr White",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neuron-Mr-White/unipi.git",
+    "directory": "packages/notify"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi-coding-agent",
+    "unipi",
+    "notify",
+    "notifications"
+  ],
+  "scripts": {
+    "test": "tsc --noEmit && node --experimental-strip-types --test src/__tests__/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "index.ts",
+    "tools.ts",
+    "commands.ts",
+    "settings.ts",
+    "events.ts",
+    "ask-user-prompt-message.ts",
+    "ntfy-config.ts",
+    "summarize.ts",
+    "types.ts",
+    "platforms/*",
+    "tui/*",
+    "skills/**/*",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@pi-unipi/core": "*",
+    "node-notifier": "^10.0.1"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.78.0",
+    "@earendil-works/pi-tui": "^0.78.0",
+    "typebox": "^1.1.38"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "skills": [],
+    "prompts": [],
+    "themes": []
+  }
+}
